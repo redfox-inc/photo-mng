@@ -81,22 +81,7 @@ var Search = {
   },
 
   setIndex : function(index) {
-    function objToSortArray(terms) {
-      var res = [];
-      for (var term in terms) {
-        res.push([term, terms[term]]);
-      }
-      res.sort(function(t1, t2) {
-        return (t1[0] > t2[0]) - (t1[0] < t2[0]);
-      });
-      return res;
-    }
-
     var q;
-
-    index.terms = objToSortArray(index.terms);
-    index.titleterms = objToSortArray(index.titleterms);
-
     this._index = index;
     if ((q = this._queued_query) !== null) {
       this._queued_query = null;
@@ -392,14 +377,19 @@ var Search = {
     for (i = 0; i < searchterms.length; i++) {
       var word = searchterms[i];
       // no match but word was a required one
-      files = Search._performTermsSearch(terms, word);
+      if ((files = terms[word]) === undefined)
+        break;
+      if (files.length === undefined) {
+        files = [files];
+      }
       // create the mapping
-      jQuery.each(files, function(file) {
+      for (j = 0; j < files.length; j++) {
+        file = files[j];
         if (file in fileMap)
           fileMap[file].push(word);
         else
           fileMap[file] = [word];
-      });
+      }
     }
 
     // now check if the files don't contain excluded terms
@@ -425,73 +415,6 @@ var Search = {
       }
     }
     return results;
-  },
-
-  _performTermsSearch: function(terms, word) {
-    // base goog.array.binarySearch_ in Closure Library
-    function binarySearch(terms, keyword) {
-      var left = 0;
-      var right = terms.length;
-
-      while (left < right) {
-        var middle = (left + right) >> 1;
-        var term = terms[middle][0];
-
-        if (terms[middle][0] < keyword) {
-          left = middle + 1;
-        } else {
-          right = middle;
-        }
-      }
-      return left;
-    }
-
-    function startsWith(str, prefix) {
-      return str.lastIndexOf(prefix, 0) !== -1;
-    }
-
-    function intersection(arr1, obj2) {
-      var res = {};
-      if (!jQuery.isArray(arr1)) {
-        arr1 = [arr1];
-      }
-      jQuery.each(arr1, function(_, k) {
-        if (k in obj2) {
-          res[k] = 1;
-        }
-      });
-      return res;
-    }
-
-    var files = {};
-    var index = binarySearch(terms, word);
-
-    var i = index;
-    while (terms[i] && startsWith(terms[i][0], word)) {
-      if (jQuery.isArray(terms[i][1])) {
-        jQuery.each(terms[i][1], function(_, n) {
-          files[n] = 1;
-        });
-      } else {
-        files[terms[i][1]] = 1;
-      }
-      i++;
-    }
-
-    var i = index - 1;
-    while (terms[i]) {
-      var term = terms[i][0];
-      if (startsWith(word, term)) {
-        var restWord = word.slice(terms[i][0].length);
-        var restIndexes = Search._performTermsSearch(terms, restWord);
-        jQuery.extend(files, intersection(terms[i][1], restIndexes));
-      }
-      if (term[0] !== word[0]) {
-        break;
-      }
-      i--;
-    }
-    return files;
   },
 
   /**
