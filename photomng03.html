@@ -71,7 +71,7 @@
 <p class="last">本章の操作はシステム管理者またはグループ管理者で行います。</p>
 </div>
 <div class="section" id="set-folder-settings">
-<span id="id2"></span><h2>3-1. スポットに仕分け先を設定する<a class="headerlink" href="#set-folder-settings" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id2"></span><h2>3-1. スポット新規登録で仕分け先を設定する<a class="headerlink" href="#set-folder-settings" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="docutils">
 <dt>スポットの新規登録をするときに、仕分け先を設定します。</dt>
 <dd>メニューバーの「スポット管理」＞「スポット一覧」をクリックし、「新規登録」ボタンを押します。</dd>
@@ -79,12 +79,42 @@
 <a class="reference internal image-reference" href="_images/photokanri39.png"><img alt="_images/photokanri39.png" class="align-center" src="_images/photokanri39.png" style="width: 70%;" /></a>
 <p>「スポット新規作成」画面になります。「写真の仕分け先の設定」は一番下で設定します。</p>
 <a class="reference internal image-reference" href="_images/photokanri40.png"><img alt="_images/photokanri40.png" class="align-center" src="_images/photokanri40.png" style="width: 70%;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">新規作成ではなく、登録済みのスポットに仕分け先を設定するときは、-&gt; <a class="reference internal" href="#change-spotpic"><span class="std std-ref">3-8. スポットの仕分け先を変更する</span></a></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="set-folder-csv">
+<span id="id3"></span><h2>3-2. スポット一括登録で仕分け先を設定する<a class="headerlink" href="#set-folder-csv" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>CSVファイルインポートにより「スポット一括登録」や「スポット一括更新」をするときに、仕分け先も設定することができます。
+一括登録・更新の詳しい手順については「cyzen管理サイト操作説明書」を参照してください。</p>
+<p>「スポット管理」＞「一括登録」＞「スポット情報一括登録」を押します。</p>
+<a class="reference internal image-reference" href="_images/photokanri323.png"><img alt="_images/photokanri323.png" class="align-center" src="_images/photokanri323.png" style="width: 100%;" /></a>
+<p>「スポット情報一括登録」の画面で、「最新のCSVテンプレートファイルをダウンロードする」のボタンを押します。</p>
+<a class="reference internal image-reference" href="_images/photokanri324.png"><img alt="_images/photokanri324.png" class="align-center" src="_images/photokanri324.png" style="width: 100%;" /></a>
+<p>「spot_header_201609****」というファイルがダウンロードできます。「仕分け先」のセルに、あらかじめ登録済みの仕分け先名を入力します。</p>
+<a class="reference internal image-reference" href="_images/photokanri322.png"><img alt="_images/photokanri322.png" class="align-center" src="_images/photokanri322.png" style="width: 100%;" /></a>
+<p>※入力できるのは、「登録済みの仕分け名」または「未分類」「空欄」です。「未分類」「空欄」で指定した場合と、仕分け先が正しく指定されなかった場合は、「未分類」のままとなります。</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<dl class="last docutils">
+<dt>「スポット一括更新」をするときの注意点</dt>
+<dd><div class="first last line-block">
+<div class="line">・仕分け先が「未分類」（まだ指定されていない）のスポットのみ、更新できます。</div>
+<div class="line">・すでに仕分け先が指定してあるスポットに他の仕分け先を指定しても、更新できません。（エラーメッセージが返されます）</div>
+</div>
+</dd>
+</dl>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="see-spotpic">
-<span id="id3"></span><h2>3-2. アプリから送信された写真を閲覧する<a class="headerlink" href="#see-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id4"></span><h2>3-3. アプリから送信された写真を閲覧する<a class="headerlink" href="#see-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="docutils">
 <dt>メニューバーの「スポット管理」＞「スポット一覧」の画面でスポットを選択し、一番右端の「詳細」をクリックで、スポットの詳細画面に移動します。</dt>
 <dd>スポットの件数が多い場合は検索して絞り込みます。</dd>
@@ -106,7 +136,7 @@
 </div>
 </div>
 <div class="section" id="edit-spotpic">
-<span id="id4"></span><h2>3-3. スポット写真を編集する<a class="headerlink" href="#edit-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id5"></span><h2>3-4. スポット写真を編集する<a class="headerlink" href="#edit-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>写真をクリックすると、写真に連携している情報（メタデータ）を確認できます。</p>
 <a class="reference internal image-reference" href="_images/photokanri21.png"><img alt="_images/photokanri21.png" class="align-center" src="_images/photokanri21.png" style="width: 90%;" /></a>
 <p>「編集」ボタンをクリックすると、情報の一部を編集できます。「完了」ボタンで編集を完了します。</p>
@@ -123,14 +153,11 @@
 </div>
 </div>
 <div class="section" id="edit-spotpic-tag">
-<span id="id5"></span><h2>3-4. スポット写真のタグ編集・ダウンロード・削除を行う<a class="headerlink" href="#edit-spotpic-tag" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id6"></span><h2>3-5. スポット写真のタグ編集・ダウンロード・削除を行う<a class="headerlink" href="#edit-spotpic-tag" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="docutils">
 <dt>スポット写真をタグあり・タグなしなどでまとめて選択することができます。</dt>
 <dd>「写真タグの変更」「選択した写真のダウンロード・削除」ができます。</dd>
 </dl>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <a class="reference internal image-reference" href="_images/photokanri23.png"><img alt="_images/photokanri23.png" class="align-center" src="_images/photokanri23.png" style="width: 90%;" /></a>
 <dl class="docutils">
 <dt>上と同じ操作を「全写真ビュー」からも行うことができます。</dt>
@@ -141,8 +168,21 @@
 <div class="line"><br /></div>
 </div>
 </div>
+<div class="section" id="photo-upload">
+<span id="id7"></span><h2>3-6. スポット写真をアップロードする<a class="headerlink" href="#photo-upload" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>スポット写真として外部から画像をアップロードして保存できます。
+　スポット写真閲覧画面にある「アップロード」アイコンを押します。</p>
+<a class="reference internal image-reference" href="_images/photokanri41.png"><img alt="_images/photokanri41.png" class="align-center" src="_images/photokanri41.png" style="width: 90%;" /></a>
+<p>ファイルをドラッグ＆ドロップ、またはファイルを選択します。</p>
+<a class="reference internal image-reference" href="_images/photokanri42.png"><img alt="_images/photokanri42.png" class="align-center" src="_images/photokanri42.png" style="width: 90%;" /></a>
+<p>写真を閲覧できるグループを選択してから、アップロードします。</p>
+<a class="reference internal image-reference" href="_images/photokanri380.png"><img alt="_images/photokanri380.png" class="align-center" src="_images/photokanri380.png" style="width: 70%;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 <div class="section" id="move-spotpic">
-<span id="id6"></span><h2>3-5. スポット写真を移動する<a class="headerlink" href="#move-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id8"></span><h2>3-7. スポット写真を移動する<a class="headerlink" href="#move-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>写真が保存されているフォルダを移動させることができます。
 移動したい仕分け先にドラッグ＆ドロップします。</p>
 <a class="reference internal image-reference" href="_images/photokanri25.png"><img alt="_images/photokanri25.png" class="align-center" src="_images/photokanri25.png" style="width: 90%;" /></a>
@@ -151,22 +191,22 @@
 </div>
 </div>
 <div class="section" id="change-spotpic">
-<span id="id7"></span><h2>3-6. スポットの仕分け先を変更する<a class="headerlink" href="#change-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>「仕分け先」は、スポットごとに設定します。</p>
+<span id="id9"></span><h2>3-8. スポットの仕分け先を変更する<a class="headerlink" href="#change-spotpic" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">運用を開始後、写真を1度でも保存したスポットの仕分け先は変更できません。</p>
+<p class="last">写真が保存されているスポットの仕分け先は、変更できません。</p>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="_images/photokanri37.png"><img alt="_images/photokanri37.png" class="align-center" src="_images/photokanri37.png" style="width: 90%;" /></a>
+<p>写真をすべて削除すると、仕分け先が変更できるようになります。
+　ゴミ箱に入っている写真をすべて、完全削除します。</p>
+<a class="reference internal image-reference" href="_images/photokanri381.png"><img alt="_images/photokanri381.png" class="align-center" src="_images/photokanri381.png" style="width: 90%;" /></a>
+<p>写真がなくなると、仕分け先を変更できます。</p>
+<a class="reference internal image-reference" href="_images/photokanri382.png"><img alt="_images/photokanri382.png" class="align-center" src="_images/photokanri382.png" style="width: 90%;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="download-data">
-<span id="id8"></span><h2>3-7. 操作ログをダウンロードする<a class="headerlink" href="#download-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="id10"></span><h2>3-9. 操作ログをダウンロードする<a class="headerlink" href="#download-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
 <p class="last">この操作はシステム管理者のみ実行できます。</p>
@@ -191,13 +231,15 @@
   <h3><a href="index.html">写真管理マニュアル</a></h3>
   <ul>
 <li><a class="reference internal" href="#">3. 運用時の操作方法（管理サイト）</a><ul>
-<li><a class="reference internal" href="#set-folder-settings">3-1. スポットに仕分け先を設定する</a></li>
-<li><a class="reference internal" href="#see-spotpic">3-2. アプリから送信された写真を閲覧する</a></li>
-<li><a class="reference internal" href="#edit-spotpic">3-3. スポット写真を編集する</a></li>
-<li><a class="reference internal" href="#edit-spotpic-tag">3-4. スポット写真のタグ編集・ダウンロード・削除を行う</a></li>
-<li><a class="reference internal" href="#move-spotpic">3-5. スポット写真を移動する</a></li>
-<li><a class="reference internal" href="#change-spotpic">3-6. スポットの仕分け先を変更する</a></li>
-<li><a class="reference internal" href="#download-data">3-7. 操作ログをダウンロードする</a></li>
+<li><a class="reference internal" href="#set-folder-settings">3-1. スポット新規登録で仕分け先を設定する</a></li>
+<li><a class="reference internal" href="#set-folder-csv">3-2. スポット一括登録で仕分け先を設定する</a></li>
+<li><a class="reference internal" href="#see-spotpic">3-3. アプリから送信された写真を閲覧する</a></li>
+<li><a class="reference internal" href="#edit-spotpic">3-4. スポット写真を編集する</a></li>
+<li><a class="reference internal" href="#edit-spotpic-tag">3-5. スポット写真のタグ編集・ダウンロード・削除を行う</a></li>
+<li><a class="reference internal" href="#photo-upload">3-6. スポット写真をアップロードする</a></li>
+<li><a class="reference internal" href="#move-spotpic">3-7. スポット写真を移動する</a></li>
+<li><a class="reference internal" href="#change-spotpic">3-8. スポットの仕分け先を変更する</a></li>
+<li><a class="reference internal" href="#download-data">3-9. 操作ログをダウンロードする</a></li>
 </ul>
 </li>
 </ul>
